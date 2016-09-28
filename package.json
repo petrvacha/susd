@@ -1,14 +1,18 @@
 {
-  "name": "susd",
+  "name": "SUSD",
   "version": "1.0.0",
   "description": "Simple User Suppert Dashboard",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Petr Vacha",
+  "author": "Petr Vácha",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "handlebars": "^4.0.5",
+    "jquery": "^3.1.1",
+    "node-rest-client": "^2.0.1",
+    "path": "^0.12.7"
   }
 }
