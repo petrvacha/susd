@@ -8,10 +8,10 @@ module.exports = function(grunt) {
                 "src": [
                   "node_modules/jquery/dist/jquery.min.js",
                   "node_modules/handlebars/dist/handlebars.min.js",
-                  "public/js/app.js",
-                  "public/js/calls.js",
-                  "public/js/defaults.js",
-                  "public/js/main.js"
+                  "assets/js/app.js",
+                  "assets/js/calls.js",
+                  "assets/js/defaults.js",
+                  "assets/js/main.js"
                 ],
                 "dest": "public/js/frontend.js"
             }
