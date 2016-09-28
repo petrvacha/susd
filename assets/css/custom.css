@@ -1,0 +1,28 @@
+.question-body {
+  border-bottom-color: black;
+  border-width: 1px;
+  border-style: solid;
+  padding: 10px 5px 5px 5px;
+  border-radius: 5px;
+  background-color: beige;
+  margin: 15px;
+  color: black;
+}
+
+.btn {
+  font-weight: bolder;
+}
+
+
+.btn {
+  font-weight: bolder !important;
+}
+
+#results {
+  font-size: 17px;
+  margin: 10px 10px 10px 0px;
+}
+
+#results ul li {
+  margin-bottom: 3px;
+}

@@ -2,10 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }}</title>
   <script src="/static/js/frontend.js"></script>
+  <link href="/static/css/style.min.css" rel="stylesheet">
 </head>
 <body>
-  {{{ body }}}
+  <section id="container" class="">
+    <header class="header dark-bg">
+          <div class="toggle-nav">
+              <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"><i class="icon_menu"></i></div>
+          </div>
+          <a href="/" class="logo">{{ title }}</span></a>
+    </header>
+
+    <aside>
+        <div id="sidebar"  class="nav-collapse ">
+            <ul class="sidebar-menu">
+                <li>
+                    <a href="/">
+                        <i class="icon_house_alt"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/stackoverflow">
+                        <i class="icon_house_alt"></i>
+                        <span>Stackoverflow</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    <section id="main-content">
+        {{{ body }}}
+    </section>
 </body>
 </html>

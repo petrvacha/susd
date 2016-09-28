@@ -3,9 +3,8 @@
     <li id="question-{{{this.question_id}}}">
       <a href="{{this.link}}" target="_blank">{{{this.title}}}</a>
       [{{# each this.tags}}{{{this}}}{{#unless @last}}, {{/unless}}{{/each}}]
-      <a href="#" data-questionid="{{{this.question_id}}}" class="js-question-show-more">Show more</a>
-      <a href="#" class="js-question-show-less" style="display: none">Show less</a>
+      <a href="#" data-questionid="{{{this.question_id}}}" class="js-question-show-more btn btn-primary btn-sm">Show more</a>
+      <a href="#" class="js-question-show-less btn btn-primary btn-sm" style="display: none">Show less</a>
     </li>
   {{/each}}
-<br>
 </ul>

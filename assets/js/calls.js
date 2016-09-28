@@ -31,6 +31,7 @@ APP.Calls = {
             APP.Defaults.eventsShowMore();
             break;
           default:
+            $('#js-next-btn-unanswered-question').hide();
             $results.html('<p>Oops! Something went wrong! Help us improve your experience by sending an error report.</p>');
         }
       }

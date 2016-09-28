@@ -1,0 +1,35 @@
+<section class="wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+      <h3 class="page-header">
+        <i class="fa fa fa-bars"></i>{{pagename}}
+      </h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+        <section class="panel">
+          <header class="panel-heading">
+              <h3>List of unanswered questions from Stack Overflow</h3>
+          </header>
+          <div class="panel-body">
+            <p><input class="form-control" type="text" id="js-input-tagged" placeholder="C, java, blueprint, ..." style="width: 200px"></p>
+
+            <a id="js-btn-unanswered-question" class="btn btn-default">Refresh</a>
+            <a id="js-previous-btn-unanswered-question" class="btn btn-info" style="display:none" title="previous page"><<</a>
+            <a id="js-next-btn-unanswered-question" class="btn btn-info" title="next page">>></a>
+
+
+            <div id="results"></div>
+          </div>
+        </section>
+    </div>
+  </div>
+</section>
+
+<script>
+  $(document).ready(function () {
+    APP.Calls.getStackoverflowList(1);
+  });
+</script>
