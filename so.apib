@@ -1,0 +1,142 @@
+FORMAT: 1A
+
+# Simple User Support Dashboard (SUSD)
+
+SUSD API serves unanswered questions from Stack Overflow server.
+
+## List of questions [/api/questions/unanswered{?page,pagesize,tagged}]
+
++ Parameters
+    + page (number, optional) - Page number.
+      + Default: 1
+    + pagesize (number, optional) - The maximum number of results to return.
+      + Default: 20
+    + tagged (string, optional) - The maximum number of results to return.
+      + Default: ''
+
+### View a Questions List [GET]
+This action show serves unanswered questions sorted by last activity.
+
++ Response 200 (application/json)
+
+        {
+            "items": [
+              {
+                "tags": [
+                  "javascript",
+                  "function",
+                  "if-statement",
+                  "return"
+                ],
+                "owner": {
+                  "reputation": 1,
+                  "user_id": 6579778,
+                  "user_type": "registered",
+                  "profile_image": "https://www.gravatar.com/avatar/b27332b9f9df9ae51730459757a1ab0b?s=128&d=identicon&r=PG&f=1",
+                  "display_name": "Nicholas Rotondo",
+                  "link": "http://stackoverflow.com/users/6579778/nicholas-rotondo"
+                },
+                "is_answered": false,
+                "view_count": 36,
+                "answer_count": 2,
+                "score": -5,
+                "last_activity_date": 1475001157,
+                "creation_date": 1474999795,
+                "last_edit_date": 1475000023,
+                "question_id": 39731562,
+                "link": "http://stackoverflow.com/questions/39731562/else-return-statement-is-shadowing-else-if-return-statement",
+                "title": "else return statement is shadowing else if return statement"
+              },
+              {
+                "tags": [
+                  "c#",
+                  "ssl",
+                  "encryption",
+                  "tcp",
+                  "ssl-certificate"
+                ],
+                "owner": {
+                  "reputation": 17,
+                  "user_id": 6242642,
+                  "user_type": "registered",
+                  "accept_rate": 100,
+                  "profile_image": "https://www.gravatar.com/avatar/298f4d5e770dc1fca2087e981daa9054?s=128&d=identicon&r=PG&f=1",
+                  "display_name": "sxbrentxs",
+                  "link": "http://stackoverflow.com/users/6242642/sxbrentxs"
+                },
+                "is_answered": false,
+                "view_count": 10,
+                "answer_count": 0,
+                "score": -1,
+                "last_activity_date": 1475001154,
+                "creation_date": 1475000663,
+                "last_edit_date": 1475001154,
+                "question_id": 39731802,
+                "link": "http://stackoverflow.com/questions/39731802/encrypt-tcp-connection",
+                "title": "Encrypt TCP connection"
+              }
+            ],
+            "has_more": true,
+            "quota_max": 300,
+            "quota_remaining": 187
+        }
+
+
+
+
+## Questions [/api/questions/{id}]
+
++ Parameters
+    + id (number) - ID of the question in the form of an integer.
+
+### View a Questions Detail [GET]
+Get the question with asked ID number.
+
++ Response 200 (application/json)
+
+        {
+            "items": [
+              {
+                "tags": [
+                  "java",
+                  "hibernate",
+                  "transactions",
+                  "jta",
+                  "transactionmanager"
+                ],
+                "owner": {
+                  "reputation": 186,
+                  "user_id": 2484944,
+                  "user_type": "registered",
+                  "profile_image": "https://www.gravatar.com/avatar/a8c12caaa4a3d33bca2381ab7e662040?s=128&d=identicon&r=PG",
+                  "display_name": "S S",
+                  "link": "http://stackoverflow.com/users/2484944/s-s"
+                },
+                "is_answered": false,
+                "view_count": 11,
+                "answer_count": 1,
+                "score": 0,
+                "last_activity_date": 1474983994,
+                "creation_date": 1474983041,
+                "question_id": 39726012,
+                "link": "http://stackoverflow.com/questions/39726012/integration-of-hibernate-transaction-in-jta-transaction-manager",
+                "title": "Integration of hibernate transaction in jta transaction manager",
+                "body": "<p>In my standalone java application, jms and hibernate are used for fulfilling my requirements. I used the JTA transaction manager for the transaction management purposes. Can i enlist the XAResource for the hibernate and jms in the jta transaction to ensure the atomicity of my application.</p>\n"
+              }
+            ],
+            "has_more": false,
+            "quota_max": 300,
+            "quota_remaining": 188
+        }
+
+## API status [/api]
+The action provides information about SUSD API server.
+
+### View a api server status [GET]
+Returns status of SUSD API server.
+
++ Response 200 (application/json)
+
+        {
+            "status": "heavily idle"
+        }
