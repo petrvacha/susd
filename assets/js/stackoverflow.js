@@ -6,7 +6,6 @@ APP.Stackoverflow = {
 
     this.prepareValues();
     this.getListTemplate();
-
   },
 
   prepareValues : function () {
@@ -19,7 +18,7 @@ APP.Stackoverflow = {
   getListTemplate : function () {
     var _this = this;
     $.ajax({
-      url: "/static/hbs/list.hbs",
+      url: "/static/hbs/stackoverflow/list.hbs",
       type: "GET",
       cache: true,
       complete: function(jqXHR, textStatus) {

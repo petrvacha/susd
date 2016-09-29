@@ -3,15 +3,22 @@ const api = require('./api');
 
 routes.get('/', function (req, res) {
   res.render('dashboard', {
-    title : 'Simple User Support Dashboard',
+    title : 'SUSD',
     pagename : 'Dashboard'
   });
 });
 
 routes.get('/stackoverflow', function (req, res) {
   res.render('stackoverflow', {
-    title : 'Simple User Support Dashboard',
+    title : 'SUSD - Stack Overflow',
     pagename : 'Stack Overflow'
+  });
+});
+
+routes.get('/intercom', function (req, res) {
+  res.render('intercom', {
+    title : 'SUSD - Intercom',
+    pagename : 'Intercom'
   });
 });
 

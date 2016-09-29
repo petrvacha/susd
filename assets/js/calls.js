@@ -95,5 +95,37 @@ APP.Calls = {
         }
       });
     }
+  },
+
+  getIntercomList : function (page) {
+    var $results = $('#results');
+
+    var url = "/api/intercom/conversations/opened";
+    var query = {};
+    if (page > 1) {
+      query.page = page;
+    }
+    preparedQuery = $.param(query);
+    if (preparedQuery !== "") {
+      url += '?' + preparedQuery;
+    }
+
+    $.ajax({
+      url: url,
+      type: "GET",
+      cache: false,
+      dataType: "json",
+      complete: function(jqXHR, textStatus) {
+        switch (jqXHR.status) {
+          case 200:
+            var template = Handlebars.compile(APP.Intercom.listTemplate);
+            $results.html(template(jqXHR.responseJSON));
+            break;
+          default:
+            $('#js-next-btn-opened-conversations').hide();
+            $results.html('<p>Oops! Something went wrong! Help us improve your experience by sending an error report.</p>');
+        }
+      }
+    });
   }
 };

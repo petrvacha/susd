@@ -12,6 +12,7 @@
     "grunt-concat-css": "^0.3.1",
     "grunt-contrib-concat": "^1.0.1",
     "handlebars": "^4.0.5",
+    "intercom-client": "^2.8.3",
     "jquery": "^3.1.1",
     "node-rest-client": "^2.0.1",
     "path": "^0.12.7"

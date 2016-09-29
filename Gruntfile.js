@@ -13,6 +13,7 @@ module.exports = function(grunt) {
                   "assets/js/defaults.js",
                   "assets/js/dashboard.js",
                   "assets/js/stackoverflow.js",
+                  "assets/js/intercom.js",
                   "assets/js/main.js",
                   "assets/js/niceadmin/bootstrap.min.js",
                   "assets/js/niceadmin/jquery.nicescroll.js",

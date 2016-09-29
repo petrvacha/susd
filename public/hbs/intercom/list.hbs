@@ -1,0 +1,9 @@
+<ul>
+  {{# each conversations}}
+    <li id="conversation-{{{this.id}}}">
+      <h4>{{{this.conversation_message.subject}}}</h4>
+    </p>{{{this.conversation_message.body}}}</p>
+    <hr>
+    </li>
+  {{/each}}
+</ul>
