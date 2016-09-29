@@ -7,5 +7,43 @@
     </div>
   </div>
 
+  <div class="row">
+    <div id="js-question-count-blueprint-box" title="Count of unanswered question about Blueprint" class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+      <div class="info-box blue-bg">
+        <i class="fa fa-stack-overflow" aria-hidden="true"></i>
+        <div id="js-question-count-blueprint" class="count">-</div>
+        <div class="title">Blueprint</div>
+      </div>
+    </div>
 
+    <div id="js-question-count-apiary-box" title="Count of unanswered question about Apiary" class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+      <div class="info-box brown-bg">
+        <i class="fa fa-stack-overflow" aria-hidden="true"></i>
+        <div id="js-question-count-apiary" class="count">-</div>
+        <div class="title">Apiary</div>
+      </div>
+    </div>
+
+    <div id="js-question-count-dredd-box" title="Count of unanswered question about Dredd" class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+      <div class="info-box dark-bg">
+        <i class="fa fa-stack-overflow" aria-hidden="true"></i>
+        <div id="js-question-count-dredd" class="count">-</div>
+        <div class="title">Dredd</div>
+      </div>
+    </div>
+
+    <div id="js-question-count-api-box" title="Count of unanswered question about API" class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+      <div class="info-box green-bg">
+        <i class="fa fa-stack-overflow" aria-hidden="true"></i>
+        <div id="js-question-count-api" class="count">-</div>
+        <div class="title">API</div>
+      </div>
+    </div>
+  </div>
 </section>
+
+<script>
+  $(document).ready(function () {
+    APP.Dashboard.init();
+  });
+</script>

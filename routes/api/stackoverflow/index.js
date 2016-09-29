@@ -20,6 +20,7 @@ router.get('/questions/unanswered', function (req, res) {
   if (!isNaN(pagesize) && pagesize !== '') {
     apicall += '&pagesize=' + pagesize;
   }
+
   client.get(apicall, function (data, response) {
       res.send(data);
   });

@@ -26,3 +26,10 @@
 #results ul li {
   margin-bottom: 3px;
 }
+
+#js-question-count-blueprint-box,
+#js-question-count-apiary-box,
+#js-question-count-dredd-box,
+#js-question-count-api-box {
+  cursor: pointer;
+}

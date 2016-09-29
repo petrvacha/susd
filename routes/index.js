@@ -11,7 +11,7 @@ routes.get('/', function (req, res) {
 routes.get('/stackoverflow', function (req, res) {
   res.render('stackoverflow', {
     title : 'Simple User Support Dashboard',
-    pagename : 'Stackoverflow'
+    pagename : 'Stack Overflow'
   });
 });
 
