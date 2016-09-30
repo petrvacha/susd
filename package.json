@@ -2,7 +2,7 @@
   "name": "SUSD",
   "version": "1.0.0",
   "description": "Simple User Suppert Dashboard",
-  "main": "index.js",
+  "main": "app.js",
   "author": "Petr Vácha",
   "license": "ISC",
   "dependencies": {
@@ -13,6 +13,7 @@
     "grunt": "^1.0.1",
     "grunt-concat-css": "^0.3.1",
     "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
     "handlebars": "^4.0.5",
     "intercom-client": "^2.8.3",
     "jquery": "^3.1.1",

@@ -2,6 +2,16 @@ module.exports = function(grunt) {
 
     // Project configuration.
     grunt.initConfig({
+        copy: {
+          main: {
+            expand: true,
+              cwd: 'assets/fonts/',
+              src: ['**'],
+              dest: 'public/fonts',
+              filter: 'isFile'
+          },
+        },
+
         concat: {
             "options": { "separator": ";" },
             "build": {
@@ -25,6 +35,7 @@ module.exports = function(grunt) {
                 "dest": "public/js/frontend.js"
             }
         },
+
         concat_css: {
           options: {
             "processImport": false
@@ -39,7 +50,8 @@ module.exports = function(grunt) {
     // Load required modules
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-concat-css');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
     // Task definitions
-    grunt.registerTask('default', ['concat', 'concat_css']);
+    grunt.registerTask('default', ['copy', 'concat', 'concat_css']);
 };
