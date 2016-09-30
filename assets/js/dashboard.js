@@ -5,15 +5,15 @@ APP.Dashboard = {
   },
 
   calls: function () {
-    APP.Calls.getStackoverflowQuestionCount('blueprint', '#js-question-count-blueprint');
+    APP.Calls.getStackoverflowQuestionCount('apiblueprint', '#js-question-count-apiblueprint');
     APP.Calls.getStackoverflowQuestionCount('apiary', '#js-question-count-apiary');
     APP.Calls.getStackoverflowQuestionCount('dredd', '#js-question-count-dredd');
     APP.Calls.getStackoverflowQuestionCount('api', '#js-question-count-api');
   },
 
   events: function () {
-    $('#js-question-count-blueprint-box').on('click', function (event){
-      window.location.replace('stackoverflow/?tagged=blueprint');
+    $('#js-question-count-apiblueprint-box').on('click', function (event){
+      window.location.replace('stackoverflow/?tagged=apiblueprint');
     });
     $('#js-question-count-apiary-box').on('click', function (event){
       window.location.replace('stackoverflow/?tagged=apiary');

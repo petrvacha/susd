@@ -1,7 +1,6 @@
 var express = require('express');
 var path = require('path');
 var app = express();
-
 var routes = require('./routes');
 var config = require('./config/config.js');
 var hbs = require('express-handlebars');

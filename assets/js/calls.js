@@ -56,8 +56,6 @@ APP.Calls = {
         switch (jqXHR.status) {
           case 200:
             var count = Object.keys(jqXHR.responseJSON.items).length;
-            console.log(jqXHR.responseJSON);
-            console.log(jqXHR.responseJSON.has_more);
             if (jqXHR.responseJSON.has_more) {
               count = query.pagesize + '+';
             }
@@ -124,6 +122,25 @@ APP.Calls = {
           default:
             $('#js-next-btn-opened-conversations').hide();
             $results.html('<p>Oops! Something went wrong! Help us improve your experience by sending an error report.</p>');
+        }
+      }
+    });
+  },
+
+  login : function () {
+    $.ajax({
+      url: "/api/authenticate",
+      type: "POST",
+      dataType: "json",
+      complete: function(jqXHR, textStatus) {
+        switch (jqXHR.status) {
+          case 200:
+            $.cookie("access_token", jqXHR.responseJSON.token, { expires: 1 });
+            window.location.replace("/dashboard");
+            break;
+          default:
+            $('#js-next-btn-opened-conversations').hide();
+            alert('Oops! Something went wrong! Help us improve your experience by sending an error report.');
         }
       }
     });

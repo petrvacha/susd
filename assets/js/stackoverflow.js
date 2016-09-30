@@ -30,7 +30,6 @@ APP.Stackoverflow = {
             break;
           break;
             default:
-            console.log(jqXHR.status);
             alert("Oops! Something went wrong! Help us improve your experience by sending an error report.");
         }
       }

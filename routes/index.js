@@ -1,9 +1,17 @@
-const routes = require('express').Router();
-const api = require('./api');
+var routes = require('express').Router();
+var api = require('./api');
 
 routes.get('/', function (req, res) {
-  res.render('dashboard', {
+  res.render('login', {
     title : 'SUSD',
+    pagename : 'Login',
+    layout: null
+  });
+});
+
+routes.get('/dashboard', function (req, res) {
+  res.render('dashboard', {
+    title : 'SUSD - Dashboard',
     pagename : 'Dashboard'
   });
 });

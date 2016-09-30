@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <script src="/static/js/frontend.js"></script>
+  <link href="/static/css/style.min.css" rel="stylesheet">
+</head>
+
+<body class="login-img3-body">
+  <div class="container">
+
+    <form class="login-form">
+      <div class="login-wrap">
+          <p class="login-img"><i class="icon_lock_alt"></i></p>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="icon_profile"></i></span>
+            <input type="text" class="form-control" placeholder="Username" autofocus>
+          </div>
+          <div class="input-group">
+              <span class="input-group-addon"><i class="icon_key_alt"></i></span>
+              <input type="password" class="form-control" placeholder="Password">
+          </div>
+          <button id="js-login-btn" class="btn btn-primary btn-lg btn-block">Login</button>
+      </div>
+    </form>
+
+  </div>
+
+<script>
+  $(document).ready(function () {
+    APP.Login.init();
+  });
+</script>
+</body>
+</html>

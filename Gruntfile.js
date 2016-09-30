@@ -7,10 +7,12 @@ module.exports = function(grunt) {
             "build": {
                 "src": [
                   "node_modules/jquery/dist/jquery.min.js",
+                  "node_modules/jquery.cookie/jquery.cookie.js",
                   "node_modules/handlebars/dist/handlebars.min.js",
                   "assets/js/app.js",
                   "assets/js/calls.js",
                   "assets/js/defaults.js",
+                  "assets/js/login.js",
                   "assets/js/dashboard.js",
                   "assets/js/stackoverflow.js",
                   "assets/js/intercom.js",

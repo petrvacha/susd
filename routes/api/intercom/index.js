@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
-const config = require('../../../config/config.js');
-const fixtures = require('../../../fixtures/fixtures.js');
+var config = require('../../../config/config.js');
+var fixtures = require('../../../fixtures/fixtures.js');
 
 // @todo This part is only for the prototype without a valid acccount.
 if (config.api.intercom.allowed) {

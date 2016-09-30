@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const config = require('../../../config/config.js');
+var config = require('../../../config/config.js');
 
 var Client = require('node-rest-client').Client;
 var client = new Client();
@@ -32,7 +32,6 @@ router.get('/questions/:id', function (req, res) {
 
   if (!isNaN(id)) {
     apicall = apicall.replace(/:id/g , id);
-    console.log(apicall);
     client.get(apicall, function (data, response) {
         res.send(data);
     });

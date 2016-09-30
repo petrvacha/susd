@@ -1,4 +1,5 @@
 var config = {};
+config.secret = 'giveninfinitetimeallpossibilitiesarerealized';
 config.web = {};
 config.web.port = process.env.WEB_PORT || 3000;
 

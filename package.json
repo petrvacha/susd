@@ -6,6 +6,8 @@
   "author": "Petr Vácha",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
     "express": "^4.14.0",
     "express-handlebars": "^3.0.0",
     "grunt": "^1.0.1",
@@ -14,6 +16,7 @@
     "handlebars": "^4.0.5",
     "intercom-client": "^2.8.3",
     "jquery": "^3.1.1",
+    "jsonwebtoken": "^7.1.9",
     "node-rest-client": "^2.0.1",
     "path": "^0.12.7"
   }

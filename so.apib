@@ -17,6 +17,11 @@ SUSD API serves unanswered questions from Stack Overflow server.
 ### View a Questions List [GET]
 This action show serves unanswered questions sorted by last activity.
 
++ Request
+    + Headers
+
+            Cookie: access_token=JWT
+
 + Response 200 (application/json)
 
         {
@@ -91,6 +96,11 @@ This action show serves unanswered questions sorted by last activity.
 
 ### View a Questions Detail [GET]
 Get the question with asked ID number.
+
++ Request
+    + Headers
+
+            Cookie: access_token=JWT
 
 + Response 200 (application/json)
 
